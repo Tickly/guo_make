@@ -5,5 +5,9 @@
     <string name="widget_description">显示当前年月日</string>
     <string name="shortcut_add_widget_short">添加小部件</string>
     <string name="shortcut_add_widget_long">添加桌面小部件</string>
+    <string name="add_widget_hint">点击下面按钮后，如系统支持会弹出“添加到桌面”的确认。</string>
+    <string name="add_widget_not_supported">系统桌面不支持“一键添加”。请在桌面空白处长按 → 小组件 → 锅造。</string>
+    <string name="add_widget_request_sent">已发起添加请求：请留意系统弹窗确认。</string>
+    <string name="add_widget_request_failed">发起添加请求失败：请用桌面“小组件”列表手动添加。</string>
 </resources>
 
