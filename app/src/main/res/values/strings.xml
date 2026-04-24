@@ -3,5 +3,7 @@
     <string name="app_name">锅造</string>
     <string name="main_hint">这是一个最小可用示例：添加桌面小组件即可看到当前日期。</string>
     <string name="widget_description">显示当前年月日</string>
+    <string name="shortcut_add_widget_short">添加小部件</string>
+    <string name="shortcut_add_widget_long">添加桌面小部件</string>
 </resources>
 
