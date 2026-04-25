@@ -10,6 +10,7 @@ import android.content.Context
 object WidgetPrefs {
     private const val PREFS_NAME = "widget_prefs"
     private const val KEY_TEXT_PREFIX = "text_"
+    private const val KEY_THEME_PREFIX = "theme_"
 
     /**
      * 保存文本小组件的展示内容。
@@ -37,6 +38,31 @@ object WidgetPrefs {
     }
 
     /**
+     * 保存文本小组件的主题。
+     *
+     * @param context 输入：上下文。
+     * @param appWidgetId 输入：小组件实例 id。
+     * @param themeId 输入：主题 id（见 TextWidgetTheme）。
+     * @return 输出：无返回值。
+     */
+    fun saveTheme(context: Context, appWidgetId: Int, themeId: String) {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        prefs.edit().putString(KEY_THEME_PREFIX + appWidgetId, themeId).apply()
+    }
+
+    /**
+     * 读取文本小组件的主题 id。
+     *
+     * @param context 输入：上下文。
+     * @param appWidgetId 输入：小组件实例 id。
+     * @return 输出：主题 id；若未配置则返回默认主题 id。
+     */
+    fun loadThemeId(context: Context, appWidgetId: Int): String {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        return prefs.getString(KEY_THEME_PREFIX + appWidgetId, TextWidgetTheme.Light.id) ?: TextWidgetTheme.Light.id
+    }
+
+    /**
      * 删除某个小组件实例的配置，避免残留数据。
      *
      * @param context 输入：上下文。
@@ -45,7 +71,10 @@ object WidgetPrefs {
      */
     fun deleteText(context: Context, appWidgetId: Int) {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        prefs.edit().remove(KEY_TEXT_PREFIX + appWidgetId).apply()
+        prefs.edit()
+            .remove(KEY_TEXT_PREFIX + appWidgetId)
+            .remove(KEY_THEME_PREFIX + appWidgetId)
+            .apply()
     }
 }
 

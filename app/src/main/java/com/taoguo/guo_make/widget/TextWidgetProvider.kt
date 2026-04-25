@@ -58,8 +58,11 @@ class TextWidgetProvider : AppWidgetProvider() {
         val text = WidgetPrefs.loadText(context, appWidgetId).ifBlank {
             context.getString(R.string.text_widget_default_text)
         }
+        val theme = TextWidgetTheme.fromId(WidgetPrefs.loadThemeId(context, appWidgetId))
         val views = RemoteViews(context.packageName, R.layout.widget_text)
+        views.setInt(R.id.widget_text_root, "setBackgroundResource", theme.backgroundRes)
         views.setTextViewText(R.id.widget_text_value, text)
+        views.setTextColor(R.id.widget_text_value, theme.textColor)
 
         val editIntent = Intent(context, TextWidgetConfigureActivity::class.java).apply {
             putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
