@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2026-04-24"
-        android:textColor="#F5F5F5"
+        android:textColor="#1F1F1F"
         android:textSize="20sp"
         android:textStyle="bold" />
 

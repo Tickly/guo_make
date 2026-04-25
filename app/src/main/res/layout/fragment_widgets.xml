@@ -21,7 +21,7 @@
             android:padding="2dp"
             app:cardCornerRadius="18dp"
             app:cardElevation="1dp"
-            app:strokeColor="#1FFFFFFF"
+            app:strokeColor="#14000000"
             app:strokeWidth="1dp">
 
             <LinearLayout
@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/widget_date_title"
-                    android:textColor="#F5F5F5"
+                    android:textColor="#1F1F1F"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:text="@string/widget_date_desc"
-                    android:textColor="#CCFFFFFF"
+                    android:textColor="#666666"
                     android:textSize="13sp" />
 
             </LinearLayout>
@@ -61,7 +61,7 @@
             android:padding="2dp"
             app:cardCornerRadius="18dp"
             app:cardElevation="1dp"
-            app:strokeColor="#1FFFFFFF"
+            app:strokeColor="#14000000"
             app:strokeWidth="1dp">
 
             <LinearLayout
@@ -75,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/widget_text_title"
-                    android:textColor="#F5F5F5"
+                    android:textColor="#1F1F1F"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -84,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:text="@string/widget_text_desc"
-                    android:textColor="#CCFFFFFF"
+                    android:textColor="#666666"
                     android:textSize="13sp" />
 
             </LinearLayout>
@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:text="@string/widget_add_note"
-            android:textColor="#88000000"
+            android:textColor="#777777"
             android:textSize="12sp" />
 
     </LinearLayout>
