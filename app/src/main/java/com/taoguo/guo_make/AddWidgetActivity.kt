@@ -3,6 +3,8 @@ package com.taoguo.guo_make
 import android.appwidget.AppWidgetManager
 import android.content.ComponentName
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -18,6 +20,7 @@ import com.taoguo.guo_make.widget.DateWidgetProvider
  * @return 输出：无返回值。
  */
 class AddWidgetActivity : AppCompatActivity() {
+    private val mainHandler = Handler(Looper.getMainLooper())
 
     /**
      * Activity 创建回调：展示按钮并发起固定小组件请求。
@@ -42,6 +45,13 @@ class AddWidgetActivity : AppCompatActivity() {
                 PinWidgetResult.RequestSent -> {
                     statusText.setText(R.string.add_widget_request_sent)
                     Toast.makeText(this, R.string.add_widget_request_sent, Toast.LENGTH_SHORT).show()
+
+                    mainHandler.postDelayed(
+                        {
+                            statusText.setText(R.string.add_widget_no_prompt_hint)
+                        },
+                        4000L,
+                    )
                 }
                 PinWidgetResult.Failed -> {
                     statusText.setText(R.string.add_widget_request_failed)
@@ -61,7 +71,8 @@ class AddWidgetActivity : AppCompatActivity() {
         if (!appWidgetManager.isRequestPinAppWidgetSupported) return PinWidgetResult.NotSupported
 
         val provider = ComponentName(this, DateWidgetProvider::class.java)
-        val ok = appWidgetManager.requestPinAppWidget(provider, null, null)
+        val callback = AddWidgetPinnedReceiver.createSuccessCallback(this)
+        val ok = appWidgetManager.requestPinAppWidget(provider, null, callback)
         return if (ok) PinWidgetResult.RequestSent else PinWidgetResult.Failed
     }
 

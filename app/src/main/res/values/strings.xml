@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">锅造</string>
     <string name="main_hint">这是一个最小可用示例：添加桌面小组件即可看到当前日期。</string>
+    <string name="hyperos_permission_hint">HyperOS：若添加小组件无反应/列表看不到，请在权限里打开「桌面快捷方式」。</string>
     <string name="widget_description">显示当前年月日</string>
     <string name="shortcut_add_widget_short">添加小部件</string>
     <string name="shortcut_add_widget_long">添加桌面小部件</string>
@@ -9,5 +10,15 @@
     <string name="add_widget_not_supported">系统桌面不支持“一键添加”。请在桌面空白处长按 → 小组件 → 锅造。</string>
     <string name="add_widget_request_sent">已发起添加请求：请留意系统弹窗确认。</string>
     <string name="add_widget_request_failed">发起添加请求失败：请用桌面“小组件”列表手动添加。</string>
+    <string name="add_widget_no_prompt_hint">未看到弹窗？HyperOS 可能禁用「桌面快捷方式」权限，请到应用权限中打开后再试。</string>
+    <string name="add_widget_pinned_success">已添加到桌面。</string>
+    <string name="text_widget_default_text">1</string>
+    <string name="text_widget_config_title">设置文本小部件</string>
+    <string name="text_widget_config_hint">请输入要显示的文本（可为纯数字）</string>
+    <string name="text_widget_config_empty">请输入内容</string>
+    <string name="action_save">保存</string>
+    <string name="action_cancel">取消</string>
+    <string name="text_widget_label">文本小部件</string>
+    <string name="text_widget_description">显示自定义文本（可为纯数字）</string>
 </resources>
 

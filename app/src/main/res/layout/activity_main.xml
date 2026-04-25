@@ -20,5 +20,12 @@
         android:text="@string/main_hint"
         android:textSize="14sp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/hyperos_permission_hint"
+        android:textSize="13sp" />
+
 </LinearLayout>
 
