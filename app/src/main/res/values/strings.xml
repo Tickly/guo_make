@@ -20,5 +20,13 @@
     <string name="action_cancel">取消</string>
     <string name="text_widget_label">文本小部件</string>
     <string name="text_widget_description">显示自定义文本（可为纯数字）</string>
+    <string name="tab_home">首页</string>
+    <string name="tab_widgets">小部件</string>
+    <string name="open_permissions_settings">权限设置</string>
+    <string name="widget_date_title">日期小组件</string>
+    <string name="widget_date_desc">显示当前年月日（yyyy-MM-dd）</string>
+    <string name="widget_text_title">文本小组件</string>
+    <string name="widget_text_desc">显示自定义文本（单行居中，超长省略）</string>
+    <string name="widget_add_note">提示：若一键添加无弹窗/无反应，请先在权限中开启「桌面快捷方式」。</string>
 </resources>
 

@@ -2,6 +2,10 @@ package com.taoguo.guo_make
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
+import androidx.viewpager2.widget.ViewPager2
+import com.taoguo.guo_make.ui.MainTabsAdapter
 
 /**
  * 应用主界面 Activity。
@@ -19,6 +23,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val pager = findViewById<ViewPager2>(R.id.main_pager)
+        val tabs = findViewById<TabLayout>(R.id.main_tabs)
+        pager.adapter = MainTabsAdapter(this)
+
+        TabLayoutMediator(tabs, pager) { tab, position ->
+            tab.text = when (position) {
+                0 -> getString(R.string.tab_home)
+                1 -> getString(R.string.tab_widgets)
+                else -> getString(R.string.tab_home)
+            }
+        }.attach()
     }
 }
 
