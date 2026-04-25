@@ -63,6 +63,7 @@ class TextWidgetProvider : AppWidgetProvider() {
         views.setInt(R.id.widget_text_root, "setBackgroundResource", theme.backgroundRes)
         views.setTextViewText(R.id.widget_text_value, text)
         views.setTextColor(R.id.widget_text_value, theme.textColor)
+        views.setInt(R.id.widget_text_value, "setBackgroundResource", theme.chipRes)
 
         val editIntent = Intent(context, TextWidgetConfigureActivity::class.java).apply {
             putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)

@@ -125,6 +125,7 @@ class TextWidgetConfigureActivity : AppCompatActivity() {
     private fun applyThemeToUi(theme: TextWidgetTheme) {
         previewBg.setBackgroundResource(theme.backgroundRes)
         previewText.setTextColor(theme.textColor)
+        previewText.setBackgroundResource(theme.chipRes)
     }
 
     /**

@@ -12,6 +12,7 @@ import com.taoguo.guo_make.R
 enum class TextWidgetTheme(
     val id: String,
     @DrawableRes val backgroundRes: Int,
+    @DrawableRes val chipRes: Int,
     @ColorInt val textColor: Int,
 ) {
     /**
@@ -20,6 +21,7 @@ enum class TextWidgetTheme(
     Light(
         id = "light",
         backgroundRes = R.drawable.widget_theme_light,
+        chipRes = R.drawable.widget_chip_light,
         textColor = 0xFF1F1F1F.toInt(),
     ),
 
@@ -29,6 +31,7 @@ enum class TextWidgetTheme(
     DarkGold(
         id = "dark_gold",
         backgroundRes = R.drawable.widget_theme_dark_gold,
+        chipRes = R.drawable.widget_chip_dark_gold,
         textColor = 0xFFF5F5F5.toInt(),
     ),
 
@@ -38,6 +41,7 @@ enum class TextWidgetTheme(
     CoolBlue(
         id = "cool_blue",
         backgroundRes = R.drawable.widget_theme_cool_blue,
+        chipRes = R.drawable.widget_chip_cool_blue,
         textColor = 0xFF1F1F1F.toInt(),
     ),
 
@@ -47,6 +51,7 @@ enum class TextWidgetTheme(
     PureBlack(
         id = "pure_black",
         backgroundRes = R.drawable.widget_theme_pure_black,
+        chipRes = R.drawable.widget_chip_pure_black,
         textColor = 0xFFFFFFFF.toInt(),
     ),
 
@@ -56,6 +61,7 @@ enum class TextWidgetTheme(
     Mint(
         id = "mint",
         backgroundRes = R.drawable.widget_theme_mint,
+        chipRes = R.drawable.widget_chip_mint,
         textColor = 0xFF12302B.toInt(),
     ),
 
@@ -65,6 +71,7 @@ enum class TextWidgetTheme(
     Sunset(
         id = "sunset",
         backgroundRes = R.drawable.widget_theme_sunset,
+        chipRes = R.drawable.widget_chip_sunset,
         textColor = 0xFF2B1206.toInt(),
     ),
 
@@ -74,6 +81,7 @@ enum class TextWidgetTheme(
     Lavender(
         id = "lavender",
         backgroundRes = R.drawable.widget_theme_lavender,
+        chipRes = R.drawable.widget_chip_lavender,
         textColor = 0xFF221A2C.toInt(),
     ),
 
@@ -83,6 +91,7 @@ enum class TextWidgetTheme(
     Forest(
         id = "forest",
         backgroundRes = R.drawable.widget_theme_forest,
+        chipRes = R.drawable.widget_chip_forest,
         textColor = 0xFFF2FFF9.toInt(),
     ),
 
@@ -92,6 +101,7 @@ enum class TextWidgetTheme(
     Rose(
         id = "rose",
         backgroundRes = R.drawable.widget_theme_rose,
+        chipRes = R.drawable.widget_chip_rose,
         textColor = 0xFF2B0C13.toInt(),
     ),
 
@@ -101,6 +111,7 @@ enum class TextWidgetTheme(
     Graphite(
         id = "graphite",
         backgroundRes = R.drawable.widget_theme_graphite,
+        chipRes = R.drawable.widget_chip_graphite,
         textColor = 0xFFF5F5F5.toInt(),
     ),
     ;
