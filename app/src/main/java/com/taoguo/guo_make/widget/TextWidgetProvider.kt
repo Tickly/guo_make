@@ -1,8 +1,10 @@
 package com.taoguo.guo_make.widget
 
+import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
+import android.content.Intent
 import android.widget.RemoteViews
 import com.taoguo.guo_make.R
 
@@ -58,6 +60,19 @@ class TextWidgetProvider : AppWidgetProvider() {
         }
         val views = RemoteViews(context.packageName, R.layout.widget_text)
         views.setTextViewText(R.id.widget_text_value, text)
+
+        val editIntent = Intent(context, TextWidgetConfigureActivity::class.java).apply {
+            putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+        val editPendingIntent = PendingIntent.getActivity(
+            context,
+            appWidgetId,
+            editIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+        )
+        views.setOnClickPendingIntent(R.id.widget_text_value, editPendingIntent)
+
         appWidgetManager.updateAppWidget(appWidgetId, views)
     }
 }
